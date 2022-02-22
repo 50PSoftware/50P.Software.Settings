@@ -30,6 +30,7 @@
             <Button x:Name="btnBrowse" Content="Procházet" Margin="0,13,10,0" VerticalAlignment="Top" Click="btnBrowse_Click" Height="23" HorizontalAlignment="Right" Width="75"/>
             <Label x:Name="label2" Content="Cesta k souboru:" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="106" Height="26"/>
             <TextBox x:Name="tbPath" Height="23" Margin="121,13,90,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button x:Name="btnNew" Content="Nový" HorizontalAlignment="Left" Margin="435,48,0,0" VerticalAlignment="Top" Width="75" Click="btnNew_Click"/>
         </Grid>
         <Grid Grid.Column="1" HorizontalAlignment="Left" Height="103" Margin="10,10,0,0" VerticalAlignment="Top" Width="520" x:Name="gridDatabase" Visibility="Hidden">
             <Grid.RowDefinitions>
