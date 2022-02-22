@@ -33,6 +33,10 @@ namespace _50P.Software.Settings.Dialogs
         public string TypeOfStorage { get; private set; }
 
         private Window otherOptionsWindow;
+        private string _filter;
+        public string Filter { set => this._filter = (string)value; }
+        private bool _newFile;
+        public bool NewFile { get => this._newFile; }
         public MainWindow(in Settings settings = null, Window other = null)
         {
             InitializeComponent();
@@ -63,7 +67,7 @@ namespace _50P.Software.Settings.Dialogs
         private void btnBrowse_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV Files|*.csv|XML Files|*.xml";
+            openFileDialog.Filter = string.IsNullOrEmpty(this._filter) ? "All Files (*.*)|*.*" : this._filter;
             if(openFileDialog.ShowDialog() == true)
             {
                 FileInfo file = new FileInfo(openFileDialog.FileName);
@@ -118,6 +122,7 @@ namespace _50P.Software.Settings.Dialogs
                 this.Filename = tbPath.Text = sett.Filename;
                 this.TypeOfStorage = sett.Type;
             }
+            this._newFile = false;
         }
 
         private void btnOtherOptions_Click(object sender, RoutedEventArgs e)
@@ -150,6 +155,19 @@ namespace _50P.Software.Settings.Dialogs
                 otherOptionsWindow = (Window)Activator.CreateInstance(typo);
                 sett.Reload();
                 Load();
+            }
+        }
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = string.IsNullOrEmpty(this._filter) ? "All Files (*.*)|*.*" : this._filter;
+            if(saveFileDialog.ShowDialog() == true)
+            {
+                FileInfo info = new FileInfo(saveFileDialog.FileName);
+                tbPath.Text = this.Filename = info.FullName;
+                this.TypeOfStorage = info.Extension;
+                this._newFile = true;
             }
         }
     }
