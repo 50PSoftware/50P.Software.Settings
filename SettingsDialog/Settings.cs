@@ -95,15 +95,15 @@ namespace _50P.Software.Settings.Dialogs
 
         [UserScopedSetting()]
         [DefaultSettingValue(null)]
-        public string Type
+        public string FileExtension
         {
             get
             {
-                return (string)this["Type"];
+                return (string)this["FileExtension"];
             }
             set
             {
-                this["Type"] = (string)value;
+                this["FileExtension"] = (string)value;
             }
         }
     }

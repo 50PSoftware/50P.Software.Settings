@@ -59,12 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Settings.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="SettingsDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="SettingsDialog.xaml.cs">
+      <DependentUpon>SettingsDialog.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
