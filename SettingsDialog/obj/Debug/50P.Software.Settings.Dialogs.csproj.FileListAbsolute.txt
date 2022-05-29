@@ -1,0 +1,4 @@
+V:\VOJTA\C#\50P.Software.Settings\SettingsDialog\obj\Debug\50P.Software.Settings.Dialogs.csprojAssemblyReference.cache
+V:\VOJTA\C#\50P.Software.Settings\SettingsDialog\obj\Debug\MainWindow.g.cs
+V:\VOJTA\C#\50P.Software.Settings\SettingsDialog\obj\Debug\50P.Software.Settings.Dialogs_MarkupCompile.cache
+V:\VOJTA\C#\50P.Software.Settings\SettingsDialog\obj\Debug\50P.Software.Settings.Dialogs_MarkupCompile.lref
